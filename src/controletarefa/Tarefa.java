@@ -37,9 +37,8 @@ public class Tarefa {
         this.concluida = concluida;
     }
     
-    public void marcarComoConcluida(Tarefa feito){
-        feito.concluida = false;
-        if(feito.concluida == true ){
+    public void marcarComoConcluida(){
+        if(concluida == true ){
             System.out.println("Tarefa Concluida!");
         }else{
             System.out.println("Tarefa não concluida!");
