@@ -12,6 +12,10 @@ public class Tarefa {
         this.descrição = descrição;
         this.concluida = concluida;
     }
+
+    public Tarefa() {
+    }
+    
     public String getTitulo() {
         return titulo;
     }
