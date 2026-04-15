@@ -22,10 +22,18 @@ public class Tarefa {
         return concluida;
     }
     public void setTitulo(String titulo) {
-        this.titulo = titulo;
+        if(titulo == null || titulo.trim().isEmpty()){
+            System.out.println("A tarefa deve conter um titulo!");
+        }else{
+            this.titulo = titulo;
+        }
     }
     public void setDescrição(String descrição) {
+        if (descrição.length() > 200) {
+            System.out.println("Descrição deve conter no maximo 200 caracteres!");
+        }else{
         this.descrição = descrição;
+        }
     }
     public void setConcluida(boolean concluida) {
         this.concluida = concluida;
