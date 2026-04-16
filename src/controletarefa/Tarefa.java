@@ -4,12 +4,12 @@ package controletarefa;
 public class Tarefa {
     
         private String titulo;
-        private String descrição;
+        private String descricao;
         private boolean concluida = false;
         
     public Tarefa(String titulo, String descrição, boolean concluida) {
         this.titulo = titulo;
-        this.descrição = descrição;
+        this.descricao = descrição;
         this.concluida = concluida;
     }
 
@@ -20,7 +20,7 @@ public class Tarefa {
         return titulo;
     }
     public String getDescrição() {
-        return descrição;
+        return descricao;
     }
     public boolean isConcluida() {
         return concluida;
@@ -32,11 +32,11 @@ public class Tarefa {
             this.titulo = titulo;
         }
     }
-    public void setDescrição(String descrição) {
-        if (descrição.length() > 200) {
+    public void setDescrição(String descricao) {
+        if (descricao.length() > 200) {
             System.out.println("Descrição deve conter no maximo 200 caracteres!");
         }else{
-        this.descrição = descrição;
+        this.descricao = descricao;
         }
     }
     public void setConcluida(boolean concluida) {
