@@ -1,7 +1,6 @@
 
 package controletarefa;
 
-import java.lang.classfile.instruction.SwitchCase;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,25 +16,25 @@ public class Gerenciador {
         String descricao;
         do{
             System.out.println("Qual titulo você gostaria de colocar na tarefa? ");
-             titulo = s.nextLine();
+            titulo = s.nextLine();
         }while (titulo.isEmpty());
-        t.setTitulo(titulo);
+            t.setTitulo(titulo);
                
         do{            
             System.out.println("Adicione uma descrição para sua tarefa: ");
             descricao = s.nextLine();
         }while (descricao.isEmpty());
-        t.setDescrição(descricao);
+            t.setDescrição(descricao);
                 
-        System.out.println("Ela foi concluida?");
-        t.setConcluida(s.nextBoolean());
+            System.out.println("Ela foi concluida?");
+            t.setConcluida(s.nextBoolean());
         
         
-        lista.add(t);
+            lista.add(t);
     }
     
     public void listarTarefa(){
-        System.out.println("\n"+lista.size()+" Tarefas Cadastradas: ");
+        System.out.println("\n"+lista.size()+" Tarefas Cadastradas.");
                  for (Tarefa t : lista) {
                     System.out.println("");
                     imprimir();

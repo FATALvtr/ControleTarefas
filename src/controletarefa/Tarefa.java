@@ -46,6 +46,8 @@ public class Tarefa {
         this.concluida = true;
         if(concluida){
             System.out.println("Tarefa Concluida!");
+        }else{
+            System.out.println("Tarefa em andamento!");
         }
     }        
 }
