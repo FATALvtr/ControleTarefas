@@ -15,31 +15,6 @@ public class Gerenciador {
         do {
             System.out.println("Qual titulo você gostaria de colocar na tarefa? ");
             titulo = s.nextLine();
-<<<<<<< HEAD
-        }while (titulo.isEmpty());
-            t.setTitulo(titulo);
-               
-        do{            
-            System.out.println("Adicione uma descrição para sua tarefa: ");
-            descricao = s.nextLine();
-        }while (descricao.isEmpty());
-            t.setDescrição(descricao);
-                
-            System.out.println("Ela foi concluida?");
-            t.setConcluida(s.nextBoolean());
-        
-        
-            lista.add(t);
-    }
-    
-    public void listarTarefa(){
-        System.out.println("\n"+lista.size()+" Tarefas Cadastradas.");
-                 for (Tarefa t : lista) {
-                    System.out.println("");
-                    imprimir();
-                 }
-        
-=======
 
         } while (titulo.isEmpty());
         t.setTitulo(titulo);
@@ -62,6 +37,12 @@ public class Gerenciador {
 
         lista.add(t);
 
+        System.out.println("Qual a prioridade da tarefa? (1 - baixa, 2 - media, 3 - alta)");
+        int prioridade = s.nextInt();
+        s.nextLine();
+        t.setPrioridade(prioridade);
+        System.out.println("Prioridade salva com sucesso!");
+
     }
 
     public void listarTarefa() {
@@ -71,7 +52,6 @@ public class Gerenciador {
             imprimir(t);
         }
 
->>>>>>> 427be6a8e09c856eb83e9275ca6c26121cf620f6
     }
 
     public void concluirTarefa() {
@@ -91,6 +71,7 @@ public class Gerenciador {
         System.out.println("------------------------------------");
         System.out.println("Titulo: " + a.getTitulo());
         System.out.println("Descrição: " + a.getDescrição());
+        System.out.println("Prioridade: " + a.getPrioridade() );
         System.out.println("Situação: " + (a.isConcluida() ? "Concluída" : "Pendente"));
         System.out.println("------------------------------------");
     }
