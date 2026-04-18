@@ -66,6 +66,23 @@ public class Gerenciador {
         }
     }
 
+    public void listarConcluido() {
+        System.out.println("\n Tarefas concluidas");
+
+        boolean temConcluida = false;
+        for(Tarefa t : lista) {
+            if(t.isConcluida()) {
+                imprimir(t);
+                temConcluida = true;
+            }
+            if(!temConcluida) {
+                System.out.println("Nenhuma tarefa encontrada!");
+            }
+        }
+
+    }
+
+
     public void imprimir(Tarefa a) {
 
         System.out.println("------------------------------------");
@@ -82,7 +99,13 @@ public class Gerenciador {
         String nome = s.nextLine();
         do {
             System.out.println("Certo, " + nome + ", digite a opção desejada: ");
-            System.out.println("1 - Adicionar tarefa.\n2 - Listar tarefas.\n3 - Concluir tarefa.\n4 - Sair.");
+            System.out.println("""
+                1 - Adicionar tarefa
+                2 - Listar tarefas
+                3 - Concluir tarefa
+                4 - Listar concluídas
+                5 - Sair
+                """);
             opcao = s.nextInt();
             s.nextLine();
 
@@ -97,6 +120,9 @@ public class Gerenciador {
                     concluirTarefa();
                     break;
                 case 4:
+                    listarConcluido();
+                    break;
+                case 5:
                     System.out.println("Obrigada por utilizar nosso sistema. \nSistema finalizado!");
                     break;
                 default:
